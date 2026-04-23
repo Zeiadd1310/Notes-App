@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/constants.dart';
 import 'package:notes_app/core/utils/styles.dart';
+import 'package:notes_app/features/notes/presentation/views/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/features/notes/presentation/views/widgets/note_card.dart';
 
 class NotesViewBody extends StatelessWidget {
@@ -50,7 +51,14 @@ class NotesViewBody extends StatelessWidget {
             bottom: 20.h,
             right: 20.w,
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  backgroundColor: Colors.transparent,
+                  builder: (_) => const AddNoteBottomSheet(),
+                );
+              },
               child: Container(
                 width: 50.w,
                 height: 50.h,
