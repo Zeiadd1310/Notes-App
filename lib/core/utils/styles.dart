@@ -1,24 +1,25 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class Styles {
   static final titleMedium = TextStyle(
-    fontSize: 15,
+    fontSize: 24.sp,
     fontWeight: FontWeight.w500,
-    color: const Color(0xFFFFFFFF),
+    color: Color(0xFFFFFFFF),
   );
   static final titleSmall = TextStyle(
-    fontSize: 13,
+    fontSize: 20.sp,
     fontWeight: FontWeight.w500,
-    color: const Color(0xFFFFFFFF),
+    color: Color(0xFFFFFFFF),
   );
   static final bodySmall = TextStyle(
-    fontSize: 11,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w400,
-    color: const Color(0xFF666666),
+    color: Color(0xFF666666),
   );
   static final labelSmall = TextStyle(
-    fontSize: 10,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    color: const Color(0xFF444444),
+    color: Color(0xFF444444),
   );
 }
