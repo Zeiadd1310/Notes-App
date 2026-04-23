@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/core/utils/app_router.dart';
 import 'package:notes_app/core/utils/styles.dart';
 import 'package:notes_app/features/notes/presentation/views/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/features/notes/presentation/views/widgets/note_card.dart';
@@ -39,7 +41,9 @@ class NotesViewBody extends StatelessWidget {
                             'This is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a testThis is a test',
                         date: '2022-01-01',
                         onDelete: () {},
-                        onTap: () {},
+                        onTap: () {
+                          GoRouter.of(context).push(AppRouter.kEditNoteView);
+                        },
                       );
                     },
                   ),
