@@ -28,22 +28,51 @@ class EditNotesViewBody extends StatelessWidget {
                   },
                   child: Icon(Icons.arrow_back_ios_new, color: Colors.white),
                 ),
-                SizedBox(width: 95.w),
-                Text('Edit Notes', style: Styles.titleMedium),
+                Expanded(
+                  child: Center(
+                    child: Text('Edit Note', style: Styles.titleMedium),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 14.h),
             Divider(color: Color(0xFF444444)),
             SizedBox(height: 14.h),
-            Text(
-              'Title',
-              style: Styles.titleMedium.copyWith(color: Color(0xff888888)),
+            TextField(
+              style: Styles.titleMedium.copyWith(color: Colors.white),
+              decoration: InputDecoration(
+                hintText: 'Title',
+                hintStyle: Styles.bodySmall.copyWith(fontSize: 20.sp),
+                filled: true,
+                fillColor: const Color(0xFF1A1A1A),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 14.w,
+                  vertical: 12.h,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: BorderSide.none,
+                ),
+              ),
             ),
             SizedBox(height: 14.h),
 
-            Text(
-              'Description',
-              style: Styles.titleMedium.copyWith(color: Color(0xff888888)),
+            TextField(
+              style: Styles.titleMedium.copyWith(color: Colors.white),
+              decoration: InputDecoration(
+                hintText: 'Description',
+                hintStyle: Styles.bodySmall.copyWith(fontSize: 20.sp),
+                filled: true,
+                fillColor: const Color(0xFF1A1A1A),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 14.w,
+                  vertical: 12.h,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: BorderSide.none,
+                ),
+              ),
             ),
             const Spacer(),
 
