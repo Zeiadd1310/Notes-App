@@ -15,22 +15,6 @@ A simple Flutter notes app built with Firebase Firestore and BLoC/Cubit state ma
 - BLoC / Cubit
 - Clean Architecture (Repository Pattern)
 
-## 📁 Project Structure
-lib/
-├── main.dart
-├── models/
-│   └── note_model.dart
-├── repos/
-│   └── notes_repo.dart
-├── cubit/
-│   ├── notes_cubit.dart
-│   └── notes_state.dart
-└── views/
-├── notes_view.dart
-└── widgets/
-├── add_note_bottom_sheet.dart
-└── note_card.dart
-
 ## 🏗️ Architecture Overview
 
 The app follows a clean layered architecture: the UI layer communicates only with the Cubit, the Cubit handles state and delegates data operations to the Repository, and the Repository is the only layer that talks to Firestore.
