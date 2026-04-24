@@ -27,6 +27,11 @@ class NotesCubit extends Cubit<NotesState> {
       emit(NoteAdding());
       await notesRepo.addNote(title: title, description: description);
       emit(NoteAdded());
+      _notesSubscription?.cancel();
+      _notesSubscription = notesRepo.getNotes().listen(
+        (notes) => emit(NotesLoaded(notes)),
+        onError: (e) => emit(NotesError(e.toString())),
+      );
     } catch (e) {
       emit(NotesError(e.toString()));
     }
